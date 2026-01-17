@@ -1,0 +1,31 @@
+package dio.web.api.services.impl;
+
+import dio.web.api.model.Client;
+import dio.web.api.services.ClientService;
+
+public class ClientServiceImpl implements ClientService {
+    @Override
+    public Iterable<Client> findAll() {
+        return null;
+    }
+
+    @Override
+    public Client findById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public void insert(Client client) {
+
+    }
+
+    @Override
+    public void update(Integer id, Client client) {
+
+    }
+
+    @Override
+    public void delete(Integer id) {
+
+    }
+}
