@@ -1,7 +1,7 @@
-package dio.web.api.services.impl;
+package dio.web.api.service.impl;
 
 import dio.web.api.model.Client;
-import dio.web.api.services.ClientService;
+import dio.web.api.service.ClientService;
 
 public class ClientServiceImpl implements ClientService {
     @Override

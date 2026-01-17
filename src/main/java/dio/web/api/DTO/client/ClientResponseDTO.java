@@ -1,4 +1,4 @@
-package dio.web.api.DTO;
+package dio.web.api.DTO.client;
 
 import dio.web.api.model.Bank;
 import dio.web.api.model.Client;

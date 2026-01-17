@@ -1,4 +1,4 @@
-package dio.web.api.services;
+package dio.web.api.service;
 
 import dio.web.api.model.Client;
 
