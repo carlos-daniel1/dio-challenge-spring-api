@@ -22,13 +22,13 @@ public class Client {
     @ManyToOne
     private Bank bancoDoCliente;
 
-    public Client(ClientRequestDTO data) {
-        this.name = data.name();
-        this.bancoDoCliente = data.bancoDoCliente();
+    public Client(String name, Bank bancoDoCliente) {
+        this.name = name;
+        this.bancoDoCliente = bancoDoCliente;
     }
 
-    public void updateFromDTO(ClientRequestDTO data) {
-        this.name = data.name();
-        this.bancoDoCliente = data.bancoDoCliente();
+    public void updateFromDTO(String name, Bank bancoDoCliente) {
+        this.name = name;
+        this.bancoDoCliente = bancoDoCliente;
     }
 }

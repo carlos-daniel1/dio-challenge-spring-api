@@ -1,5 +1,6 @@
 package dio.web.api.model;
 
+import dio.web.api.DTO.bank.BankResponseDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,4 +19,10 @@ public class Bank {
     private Integer code;
     private String fullName;
 
+    public Bank(BankResponseDTO data) {
+        this.ispb = data.ispb();
+        this.name = data.name();
+        this.code = data.code();
+        this.fullName = data.fullName();
+    }
 }
