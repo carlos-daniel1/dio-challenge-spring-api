@@ -1,8 +1,10 @@
 package dio.web.api.controller;
 
+import dio.web.api.DTO.client.ClientRequestDTO;
 import dio.web.api.DTO.client.ClientResponseDTO;
 import dio.web.api.service.impl.ClientServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +27,12 @@ public class ClientController {
     public ResponseEntity<ClientResponseDTO> getById(@PathVariable Integer id) {
         ClientResponseDTO client = clientServiceImpl.getById(id);
         return ResponseEntity.ok(client);
+    }
+
+    @PostMapping
+    public ResponseEntity<ClientResponseDTO> create(@RequestBody ClientRequestDTO data) {
+        ClientResponseDTO client = clientServiceImpl.create(data);
+        return  ResponseEntity.status(HttpStatus.CREATED).body(client);
     }
 
 }
