@@ -17,4 +17,5 @@ public class Bank {
     @Id
     private Integer code;
     private String fullName;
+
 }

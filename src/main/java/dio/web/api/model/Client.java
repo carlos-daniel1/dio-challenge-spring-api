@@ -1,5 +1,6 @@
 package dio.web.api.model;
 
+import dio.web.api.DTO.client.ClientRequestDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -20,4 +21,14 @@ public class Client {
     private String name;
     @ManyToOne
     private Bank bancoDoCliente;
+
+    public Client(ClientRequestDTO data) {
+        this.name = data.name();
+        this.bancoDoCliente = data.bancoDoCliente();
+    }
+
+    public void updateFromDTO(ClientRequestDTO data) {
+        this.name = data.name();
+        this.bancoDoCliente = data.bancoDoCliente();
+    }
 }

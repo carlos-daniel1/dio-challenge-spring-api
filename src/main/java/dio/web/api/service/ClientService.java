@@ -1,15 +1,19 @@
 package dio.web.api.service;
 
+import dio.web.api.DTO.client.ClientRequestDTO;
+import dio.web.api.DTO.client.ClientResponseDTO;
 import dio.web.api.model.Client;
 
+import java.util.List;
+
 public interface ClientService {
-    Iterable<Client> findAll();
+    List<ClientResponseDTO> getAll();
 
-    Client findById(Integer id);
+    ClientResponseDTO getById(Integer id);
 
-    void insert(Client client);
+    ClientResponseDTO create(ClientRequestDTO clientRequestDTO);
 
-    void update(Integer id, Client client);
+    ClientResponseDTO update(Integer id, ClientRequestDTO clientRequestDTO);
 
     void delete(Integer id);
 }
