@@ -25,17 +25,17 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ErrorResponse(
                         HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                        "Erro interno em BD"
+                        ex.getMessage()
                 ));
     }
 
-//    @ExceptionHandler(Exception.class)
-//    public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
-//        return ResponseEntity
-//                .status(HttpStatus.INTERNAL_SERVER_ERROR)
-//                .body(new ErrorResponse(
-//                        HttpStatus.INTERNAL_SERVER_ERROR.value(),
-//                        "Erro do servidor"
-//                ));
-//    }
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
+        return ResponseEntity
+                .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(new ErrorResponse(
+                        HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                        ex.getMessage()
+                ));
+    }
 }

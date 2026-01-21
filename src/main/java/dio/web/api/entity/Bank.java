@@ -1,4 +1,4 @@
-package dio.web.api.model;
+package dio.web.api.entity;
 
 import dio.web.api.DTO.bank.BankResponseDTO;
 import jakarta.persistence.Entity;

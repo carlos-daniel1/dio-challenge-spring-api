@@ -1,6 +1,5 @@
-package dio.web.api.model;
+package dio.web.api.entity;
 
-import dio.web.api.DTO.client.ClientRequestDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -2,7 +2,6 @@ package dio.web.api.service;
 
 import dio.web.api.DTO.client.ClientRequestDTO;
 import dio.web.api.DTO.client.ClientResponseDTO;
-import dio.web.api.model.Client;
 
 import java.util.List;
 

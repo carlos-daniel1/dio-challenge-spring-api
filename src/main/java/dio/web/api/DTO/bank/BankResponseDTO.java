@@ -1,7 +1,6 @@
 package dio.web.api.DTO.bank;
 
-import dio.web.api.model.Bank;
-import jakarta.persistence.Id;
+import dio.web.api.entity.Bank;
 
 public record BankResponseDTO( String ispb, String name, Integer code,
 String fullName) {
